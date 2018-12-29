@@ -45,7 +45,7 @@ module dial(){
       dialInterface();
       encoderInterface();
     }
-    translate([0,0,1]) import("outerLedScrew.stl");
+    translate([0,0,1]) cylinder(h=60,d=42, center=false,$fn=128);    
   }
 }
 

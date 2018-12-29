@@ -1,0 +1,38 @@
+pushd .
+
+cd ../python
+
+echo Building base components
+python ./genScrews.py
+python ./defineBearing.py
+
+
+cd ../openSCAD
+
+echo Building Dial
+openscad -o ../STL/dial.stl ./dial.scad
+
+echo Building bearing_cageA
+openscad -o ../STL/bearing_cageA.stl ./bearing_cageA.scad
+
+echo Building bearing_cageB
+openscad -o ../STL/bearing_cageB.stl ./bearing_cageB.scad
+
+echo Building bearing_innerA
+openscad -o ../STL/bearing_innerA.stl ./bearing_innerA.scad
+
+echo Building bearing_innerB
+openscad -o ../STL/bearing_innerB.stl ./bearing_innerB.scad
+
+echo Building bearing_outerA
+openscad -o ../STL/bearing_outerA.stl ./bearing_outerA.scad
+
+echo Building bearing_outerB
+openscad -o ../STL/bearing_outerB.stl ./bearing_outerB_screw.scad
+
+echo Building bearing_screwInner
+openscad -o ../STL/bearing_screwInner.stl ./bearing_screwInner_screw.scad
+
+popd
+
+

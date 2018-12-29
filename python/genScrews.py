@@ -38,6 +38,19 @@ R1 -= screwTol
 SCREW = screwGenLib.screwDef(R2,R1,P,N,"../openSCAD/innerEncScrew.stl")
 screwGenLib.buildScrew(SCREW)
 
+#screw sets for attaching assembly to frame
+R2 = (95)/2.0
+R1 = R2 - 1.0
+SCREW = screwGenLib.screwDef(R2,R1,P,N,"../openSCAD/outerFrameScrew.stl")
+screwGenLib.buildScrew(SCREW)
+
+R2 -= screwTol
+R1 -= screwTol
+SCREW = screwGenLib.screwDef(R2,R1,P,N,"../openSCAD/innerFrameScrew.stl")
+screwGenLib.buildScrew(SCREW)
+
+
+'''
 #screw sets for possible LED core
 R2 = (40)/2.0
 R1 = R2 - 1.0
@@ -48,5 +61,5 @@ R2 -= screwTol
 R1 -= screwTol
 SCREW = screwGenLib.screwDef(R2,R1,P,N,"../openSCAD/innerLedScrew.stl")
 screwGenLib.buildScrew(SCREW)
-
+'''
 
