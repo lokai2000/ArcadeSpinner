@@ -33,6 +33,15 @@ openscad -o ../STL/bearing_outerB.stl ./bearing_outerB_screw.scad
 echo Building bearing_screwInner
 openscad -o ../STL/bearing_screwInner.stl ./bearing_screwInner_screw.scad
 
+echo Building plate
+openscad -o ../STL/plate.stl ./plate.scad
+
+echo Building encoder
+openscad -o ../STL/encoder.stl ./encoder.scad
+
+echo Building encoder led ring
+openscad -o ../STL/encled.stl ./encled.scad
+
 popd
 
 
